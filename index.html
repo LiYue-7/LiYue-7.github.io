@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陈孜怡 - 软件工程学生</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', 'Microsoft YaHei', sans-serif;
+        }
+
+        body {
+            background: #f0f2f5;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #4A00E0, #8E2DE3);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .project-card, .education {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            margin: 0.3rem;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+        }
+
+        .award-list li {
+            list-style: none;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .icon {
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>陈孜怡</h1>
+            <p>华北水利水电大学 - 软件工程（大二在读）</p>
+            <p> 📱 193-3405-8196</p>
+        </header>
+
+        <section class="education">
+            <h2>🎓 教育背景</h2>
+            <p>华北水利水电大学 - 软件工程专业 (2023-2027)</p>
+            <p>专业排名：Top 15%</p>
+        </section>
+
+        <section class="project-card">
+            <h2>💻 项目经验 - C语言选课系统</h2>
+            <p>🕒 开发时间：2024年6月</p>
+            <h3>技术栈：C语言、MySQL、数据结构</h3>
+            <ul>
+                <li>• 实现基于控制台的用户交互界面</li>
+                <li>• 使用链表数据结构管理课程信息</li>
+                <li>• 开发多级权限管理系统（学生/教师/管理员）</li>
+                <li>• 实现SQL数据库存储和查询优化</li>
+                <li>• 加入冲突检测和自动排课算法</li>
+            </ul>
+        </section>
+
+      <section class="project-card">
+    <h2>🔧 技术能力</h2>
+    <div class="skills-container">
+        <!-- 编程语言 -->
+        <div class="skill-category">
+            <div class="skill-header" onclick="toggleSkill('programming')">
+                <h3>🚀 编程语言</h3>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="skill-details" id="programming">
+                <ul>
+                    <li><strong>C/C++</strong> 
+                        <p>• 掌握指针、结构体、文件操作等核心特性<br>
+                           • 开发过2000+行代码的选课系统项目<br>
+                           • 实现数据结构算法（链表/栈/队列）</p></li>
+                    <li><strong>Java</strong>
+                        <p>• 熟悉面向对象编程特性<br>
+                           • 能使用Swing开发GUI应用程序<br>
+                           • 了解多线程编程基础</p></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Web开发 -->
+        <div class="skill-category">
+            <div class="skill-header" onclick="toggleSkill('web')">
+                <h3>🌐 Web开发</h3>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="skill-details" id="web">
+                <ul>
+                    <li><strong>前端三件套</strong>
+                        <p>• 能手写符合W3C标准的HTML页面<br>
+                           • 实现响应式布局（Media Query/Flex）</p></li>
+                    <li><strong>Java Web</strong>
+                        <p>• 掌握Servlet工作原理<br>
+                           • 能使用JSP进行动态页面开发<br>
+                           • 了解MVC设计模式</p></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 数据库 -->
+        <div class="skill-category">
+            <div class="skill-header" onclick="toggleSkill('database')">
+                <h3>💾 数据库</h3>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="skill-details" id="database">
+                <ul>
+                    <li><strong>MySQL</strong>
+                        <p>• 熟练编写多表查询语句<br>
+                           • 掌握索引优化技巧<br>
+                           • 完成过课程设计ER图</p></li>
+                    <li><strong>SQL优化</strong>
+                        <p>• 在选课系统中实现查询响应&lt;100ms</p></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 其他 -->
+        <div class="skill-category">
+            <div class="skill-header" onclick="toggleSkill('cs')">
+                <h3>📚 计算机科学</h3>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="skill-details" id="cs">
+                <ul>
+                    <li><strong>数据结构</strong>
+                        <p>• 实现常见算法（排序/查找）<br>
+                           • 复杂度分析能力</p></li>
+                    <li><strong>离散数学</strong>
+                        <p>• 掌握命题逻辑与集合论<br>
+                           • 能应用图论解决实际问题</p></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* 新增交互样式 */
+    .skill-header {
+        cursor: pointer;
+        padding: 1rem;
+        background: #f8f9fa;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+
+    .skill-header:hover {
+        background: #f0f2f5;
+    }
+
+    .skill-header.active {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        background: #8E2DE310;
+    }
+
+    .arrow {
+        transition: transform 0.3s ease;
+        color: #4A00E0;
+    }
+
+    .skill-details {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+    }
+
+    .skill-details.open {
+        max-height: 500px; /* 根据内容调整 */
+    }
+</style>
+
+<script>
+    function toggleSkill(skillId) {
+        const details = document.getElementById(skillId);
+        const header = details.previousElementSibling;
+        details.classList.toggle('open');
+        header.classList.toggle('active');
+        header.querySelector('.arrow').style.transform = 
+            details.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0deg)';
+    }
+</script>
+
+        <section class="project-card">
+            <h2>🏆 荣誉</h2>
+            <ul class="award-list">
+                <li>🎖️ 校级二等奖学金（2023）</li>
+                <li>📄 大学英语四级证书（CET-4）</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>📍 河南省华北水利水电大学</p>
+            
+        </footer>
+    </div>
+</body>
+</html>
